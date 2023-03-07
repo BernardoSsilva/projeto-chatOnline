@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            }
+            .box {
+            width: 300px;
+            height: 300px;
+            color: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(6.4px);
+            -webkit-backdrop-filter: blur(6.4px);
+            border: 1px solid rgba(16, 240, 227, 0.2);
+            align-items: center;
+            text-align: center;
+            }
+
+            .box p{
+                margin-top: 15%;
+                font-size: 1.5rem;
+                
+            }
+
+            input{
+                width: 90%;
+                height: 2rem;
+                font-size: 1.5rem;
+                background-color: transparent;
+                color: white;
+                border-box: 2px  white ;
+                border-radius: 0.5rem;
+            }
+
+            .button{
+                font-size: 1.5rem;
+                width: 75%;
+                height: 3rem;
+                padding:  0.5rem 0.5rem;
+                pointer-events: painted;
+                border-radius: 16px;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.1);
+                transition: 0.5s;
+            }
+
+            .button:hover{
+                background-color: black;
+                transition:  0.5s;
+            }
+
+            .button:hover::after{
+                transition: .5s;
+            }
+
+           
+
+            body {
+            margin: 0px;
+            }
+
+
+    </style>
+    <title>Login</title>
+</head>
+<body background="/images/galaxy.png" class="container
+">
+    
+    <form class="box" action=login.php method="post">
+        <p>Digite o seu login <input type="text" name="login" id="login" placeholder="nome"></p>
+        <p>Digite sua senha <input type="password" name="pass" id="pass"></p>
+        <input type="submit" class="button" value="enviar">
+    </form> 
+</body>
+</html>
