@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(
+                to top,
+                rgba(0,0,0,0),
+                rgba(0,0,0,1)
+            )
+            , url('https://images2.alphacoders.com/542/thumb-1920-542730.png');
+            width: 100vw;
+            height: 100vh;
+
+            }
+    .box {
+    width: 300px;
+    height: 550px;
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.4px);
+    -webkit-backdrop-filter: blur(6.4px);
+    border: 1px solid rgba(16, 240, 227, 0.2);
+    align-items: center;
+    text-align: center;
+    }
+
+    .box p{
+        margin-top: 15%;
+        font-size: 1.5rem;
+        
+    }
+
+    input{
+        width: 90%;
+        height: 2rem;
+        font-size: 1.5rem;
+        background-color: transparent;
+        color: white;
+        
+        border: solid white 1px;
+        border-radius: 0.5rem;
+    }
+
+    .button{
+        font-size: 1.5rem;
+        width: 75%;
+        height: 3rem;
+        margin-top: 0.5rem;
+        border-bottom: 0.5rem;
+        padding:  0.5rem 0.5rem;
+        pointer-events: painted;
+        border-radius: 16px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+        border: solid white 1px;
+    }
+
+    .button:hover{
+        background-color: black;
+        transition:  0.5s;
+    }
+
+    .button:hover::after{
+        transition: .5s;
+    }
+
+   
+
+    body {
+    margin: 0px;
+    }
+
+    a{
+        color: white;
+    }
+
+
+    </style>
+    <title>Cadastro</title>
+</head>
+<body class="container">
+    <form class="box" action=cadastro.php method="post">
+        <p>Digite o nome de usuario <input type="text" name="nome" id="nome" placeholder="nome"></p>
+        <p>Digite sua senha <input type="password" name="passnov" id="passnov"></p>
+        <p>Confirme sua senha <input type="password" name="passconf" id="passconf"></p>
+        <input type="submit" class="button" value="cadastrar-se">
+        <p>ja possui uma conta?<a href="index.html" target="_self" rel="noopener noreferrer">realizar login</a></p>
+    </form> 
+</body>
+</html>

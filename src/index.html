@@ -7,17 +7,23 @@
     <style>
 
         .container {
-            width: 100vw;
-            height: 100vh;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            
+            background-image: linear-gradient(
+                to top,
+                rgba(0,0,0,0),
+                rgba(0,0,0,1)
+            )
+            , url('https://images2.alphacoders.com/542/thumb-1920-542730.png');
+            width: 100vw;
+            height: 100vh;
+
             }
             .box {
             width: 300px;
-            height: 300px;
+            height: 400px;
             color: white;
             border-radius: 16px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -41,7 +47,7 @@
                 background-color: transparent;
                 color: white;
                 
-                border: 2px  white ;
+                border: solid white 1px;
                 border-radius: 0.5rem;
             }
 
@@ -49,12 +55,15 @@
                 font-size: 1.5rem;
                 width: 75%;
                 height: 3rem;
+                margin-top: 0.5rem;
+                border-bottom: 0.5rem;
                 padding:  0.5rem 0.5rem;
                 pointer-events: painted;
                 border-radius: 16px;
                 color: white;
                 background-color: rgba(0, 0, 0, 0.1);
                 transition: 0.5s;
+                border: solid white 1px;
             }
 
             .button:hover{
@@ -72,17 +81,22 @@
             margin: 0px;
             }
 
+            a{
+                color: white;
+            }
+
 
     </style>
     <title>Login</title>
 </head>
-<body background="/images/galaxy.png" class="container
-">
+<body  class="container">
     
     <form class="box" action=login.php method="post">
         <p>Digite o seu login <input type="text" name="login" id="login" placeholder="nome"></p>
         <p>Digite sua senha <input type="password" name="pass" id="pass"></p>
         <input type="submit" class="button" value="enviar">
+        <p>não possui uma conta?<a href="telaCadastro.html" target="_self" rel="noopener noreferrer">cadastrar-se</a></p>
     </form> 
+    
 </body>
 </html>

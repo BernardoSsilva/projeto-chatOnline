@@ -1,0 +1,8 @@
+create database bancoLogin;
+use bancoLogin;
+create table usuario(
+    id_usuario int auto_increment not null,
+    nome varchar(100) not null,
+    senha varchar(100) not null,
+    primary key(id_usuario)
+)
